@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import Home from './components/pages/Home';
+import Detail from './components/pages/Detail';
 
+import './App.css';
 function App() {
+  const [mode, setMode] = useState('light');
+
+  const toggleMode = () => {
+    mode === 'light' ? setMode('dark') : setMode('light');
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className={mode === 'light' ? 'light-mode' : 'dark-mode'}>
+        <Navigation toggleMode={toggleMode} mode={mode}/>
+        <Switch>
+          <Route path="/" exact>
+            <Home mode={mode}/>
+          </Route>
+          <Route path="/detail/:code" exact>
+            <Detail mode={mode}/>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

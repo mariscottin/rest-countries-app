@@ -1,0 +1,33 @@
+.main-body{
+    width: 80%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.countries__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+.card__container{
+    margin: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+@media(max-width: 824px) {
+    .countries__container{
+        justify-content: center;
+    }
+}
+
+@media(max-width: 586px) {
+    .main-body{
+        width: 90%;
+    }
+}

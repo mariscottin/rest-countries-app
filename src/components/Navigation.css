@@ -1,0 +1,44 @@
+.navbar{
+    width: 100%;
+    height: 67px;
+    
+    box-shadow: 0 3px 3px -2px rgba(0,0,0,.2);
+}
+
+.nav-light{
+    background: #fff;
+}
+
+.nav-dark{
+    background: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+}
+
+.nav-content{
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+
+.style-mode{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    font-size: .8rem;
+}
+.style-mode p{
+    margin: 0;
+    font-weight: 600;
+}
+
+.style-mode svg{
+    margin-right: 6px;
+}
+

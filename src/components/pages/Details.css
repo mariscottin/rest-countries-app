@@ -1,0 +1,140 @@
+.details{
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.back-btn{
+    width: 50px;
+    padding: 5px 25px;
+    font-size: .8rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+.back-btn a, .border-country a{
+    text-decoration: none;
+}
+
+.back-btn-light, .border-country-light{
+    background: #fff;
+}
+
+.back-btn-dark, .border-country-dark{
+    background: hsl(209, 23%, 22%);
+}
+
+.back-btn-dark a, .border-country-dark a{
+    color: #fff;
+}
+
+
+.back-btn-light a, .border-country-light a{
+    color: hsl(200, 15%, 8%)
+}
+
+.back-btn:hover{
+    transform: scale(1.05);
+}
+
+.country-details__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.country-details__img-container{
+    width: 40%;
+}
+
+.country-details__img-container img{
+    width: 100%;
+}
+
+.details__container{
+    width: 50%;
+    text-align: left;
+}
+
+.subdetails-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    font-size: .7rem;
+}
+
+.subdetails-col-2{
+    margin-left: 60px;
+}
+
+.border-countries__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: .8rem;
+}
+
+.border-countries__container p{
+    margin: 5px 5px 5px 0;
+}
+
+.border-countries__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+}
+
+.border-country{
+    font-size: .6rem;
+    margin: 3px 5px;
+    padding: 4px 6px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
+    border-radius: 2px;
+}
+
+
+@media(max-width: 991px){
+
+    .subdetails-container{
+        flex-direction: column;
+    }
+    .subdetails-col-2{
+        margin-left: 0px;
+    }
+
+    .country-details__img-container{
+        width: 50%;
+    }
+    .details__container{
+        width: 40%;
+    }
+    
+}
+
+@media(max-width: 768px){
+    .country-details__img-container{
+        width: 60%;
+    }
+    .details__container{
+        width: 30%;
+    }
+
+}
+
+@media(max-width: 558px){
+    .country-details__container{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .country-details__img-container, .details__container{
+        width: 90%;
+    }
+}

@@ -1,0 +1,27 @@
+.search-filter__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 98%;
+    margin: auto;
+}
+
+@media(max-width: 586px) {
+    .search-filter__container{
+        padding-top: 20px;
+        height: auto;
+    }
+
+    .searchbar__container{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .filter__container{
+        width: 40%;
+        padding-bottom: 25px;
+    }
+}

@@ -1,0 +1,41 @@
+.searchbar{
+    height: 45px;
+    padding: 15px 10px 15px 50px;
+    border-radius: 6px;
+    border: none;
+    width: 300px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
+    font-size: .7rem;
+    margin-right: 10px;
+}
+
+.searchbar-component svg{
+    position: absolute;
+    left: .9rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: .85rem;
+}
+
+.searchbar-light svg, .searchbar-light input{
+    color: hsl(0, 0%, 52%);
+}
+
+.searchbar-dark svg, .searchbar-dark input, .searchbar-dark input::placeholder{
+    color: hsl(0, 0%, 100%);
+}
+
+.searchbar-dark input{
+    background: hsl(209, 23%, 22%);
+}
+
+
+.searchbar-component input:focus{
+    outline: none;
+}
+
+@media(max-width: 586px) {
+    .searchbar{
+        width: 100%;
+    }
+}
